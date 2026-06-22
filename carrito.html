@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Tu carrito - By Seller Global</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<style>body{font-family:"Plus Jakarta Sans",sans-serif;background:#f9f9f9;color:#1a1c1c;padding-top:72px;}</style>
+</head><body>
+
+<header style="position:fixed;top:0;width:100%;z-index:50;background:#fff;box-shadow:0 1px 4px rgba(0,0,0,0.08);">
+  <div style="display:flex;justify-content:space-between;align-items:center;height:72px;padding:0 40px;max-width:1280px;margin:0 auto;">
+    <a style="font-size:20px;font-weight:800;color:#002451;text-decoration:none;" href="index.html">By Seller Global</a>
+    <nav style="display:flex;gap:24px;align-items:center;"><a style="text-decoration:none;font-size:14px;font-weight:700;color:#835500;border-bottom:2px solid #835500;padding-bottom:2px;" href="index.html">Inicio</a><a style="text-decoration:none;font-size:14px;font-weight:500;color:#43474f;" href="bebes.html">Bebés</a><a style="text-decoration:none;font-size:14px;font-weight:500;color:#43474f;" href="infantil.html">Infantil</a><a style="text-decoration:none;font-size:14px;font-weight:500;color:#43474f;" href="junior.html">Junior</a><a style="text-decoration:none;font-size:14px;font-weight:500;color:#43474f;" href="junior-plus.html">Junior Plus</a><a style="text-decoration:none;font-size:14px;font-weight:500;color:#43474f;" href="kidult.html">Kidult</a></nav>
+    <div style="display:flex;gap:12px;align-items:center;">
+      <button style="background:none;border:none;cursor:pointer;color:#002451;"><span class="material-symbols-outlined">search</span></button>
+      <a href="carrito.html" style="color:#002451;text-decoration:none;"><span class="material-symbols-outlined">shopping_cart</span></a>
+      <button style="background:none;border:none;cursor:pointer;color:#002451;"><span class="material-symbols-outlined">person</span></button>
+    </div>
+  </div>
+</header>
+
+<main style="max-width:1280px;margin:0 auto;padding:48px 40px;">
+  <h1 style="font-size:36px;font-weight:800;color:#002451;margin-bottom:40px;">Tu carrito <span id="cart-title-count" style="font-size:24px;color:#43474f;font-weight:500;">(2 artículos)</span></h1>
+
+  <div style="display:grid;grid-template-columns:1fr 380px;gap:40px;align-items:flex-start;">
+
+    <!-- Lista de productos -->
+    <div style="display:flex;flex-direction:column;gap:16px;">
+
+      <!-- Item 1 -->
+      <div style="background:white;border-radius:16px;padding:20px;box-shadow:0 1px 4px rgba(0,0,0,0.07);display:flex;gap:20px;align-items:center;">
+        <a href="producto.html"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEuYLj5XkOhqrkWTYa3EQ9Y2766D2ibJkqDrD3QvNUkmpP64c8o6JIe3ADZpYB_us712mfDmpUCI6YB9HDviBRmnnPHsJhCmPaPh0xDPJB6yiMbZ3Z_83Q70HcQDyiBa156hW8ETI7GTNEa60VgeLLM2Aj-ZhQtC41JgVBsiqcgidcVZ6tr0KdCIy6V9FJw2s6jMGV9qr0rQsXz64g2TPTTQtnU_2Vr4pColjDlQAaUfq7V99I2keW6iC_98OWaX7Yxb_uAGikSH2S" style="width:100px;height:100px;object-fit:cover;border-radius:12px;" alt="Cocinita"/></a>
+        <div style="flex:1;">
+          <a href="producto.html" style="text-decoration:none;font-size:16px;font-weight:600;color:#1a1c1c;">Cocinita de madera</a>
+          <p style="color:#43474f;font-size:13px;margin-top:4px;">Categoría: Juego de Roles</p>
+          <p style="font-size:18px;font-weight:700;color:#002451;margin-top:8px;">45,00€</p>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:12px;">
+          <div style="display:flex;align-items:center;border:1px solid #c4c6d0;border-radius:999px;padding:4px;">
+            <button onclick="changeQty('q1',-1)" style="width:32px;height:32px;background:none;border:none;cursor:pointer;font-size:18px;border-radius:50%;">−</button>
+            <span id="q1" style="width:32px;text-align:center;font-weight:600;">1</span>
+            <button onclick="changeQty('q1',1)" style="width:32px;height:32px;background:none;border:none;cursor:pointer;font-size:18px;border-radius:50%;">+</button>
+          </div>
+          <button onclick="this.closest('div[style*=grid-column]') || this.parentElement.parentElement.remove()" style="background:none;border:none;cursor:pointer;color:#43474f;" title="Eliminar">
+            <span class="material-symbols-outlined">delete</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div style="background:white;border-radius:16px;padding:20px;box-shadow:0 1px 4px rgba(0,0,0,0.07);display:flex;gap:20px;align-items:center;">
+        <a href="producto.html"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrWhcgtwpy3_Y-O6Wvr-MqRKV_LFEr3he1JfuBRFx-OBUsAvwT40L5L4pupp1EkfOHGr9oYQ2U-QnhxINm5Ni-YM4XsgVE4iFPqForz3c2qLEVTMtR6KVe5zaRItbaeYqI46UXeiIJVBVPP87ApAwJ1RdYN-9WwgXOfYqLSelJmfDWk9JpnL4bhKTLEdZCuYxBVn02qSjLgBe7lYJ0bst8u7IbshkicCTEpCa0WdtzOHL2MjGE6sWczcOs8oxDDHaapKzQrpMJynwQ" style="width:100px;height:100px;object-fit:cover;border-radius:12px;" alt="Anillas"/></a>
+        <div style="flex:1;">
+          <a href="producto.html" style="text-decoration:none;font-size:16px;font-weight:600;color:#1a1c1c;">Set de anillas apilables</a>
+          <p style="color:#43474f;font-size:13px;margin-top:4px;">Categoría: Desarrollo</p>
+          <p style="font-size:18px;font-weight:700;color:#002451;margin-top:8px;">14,99€</p>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:12px;">
+          <div style="display:flex;align-items:center;border:1px solid #c4c6d0;border-radius:999px;padding:4px;">
+            <button onclick="changeQty('q2',-1)" style="width:32px;height:32px;background:none;border:none;cursor:pointer;font-size:18px;border-radius:50%;">−</button>
+            <span id="q2" style="width:32px;text-align:center;font-weight:600;">1</span>
+            <button onclick="changeQty('q2',1)" style="width:32px;height:32px;background:none;border:none;cursor:pointer;font-size:18px;border-radius:50%;">+</button>
+          </div>
+          <button style="background:none;border:none;cursor:pointer;color:#43474f;" title="Eliminar">
+            <span class="material-symbols-outlined">delete</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Resumen pedido -->
+    <div style="background:white;border-radius:16px;padding:28px;box-shadow:0 1px 4px rgba(0,0,0,0.07);position:sticky;top:90px;">
+      <h2 style="font-size:20px;font-weight:700;color:#002451;margin-bottom:20px;">Resumen de compra</h2>
+      <div style="display:flex;justify-content:space-between;font-size:15px;color:#1a1c1c;margin-bottom:8px;"><span>Subtotal</span><span>59,99€</span></div>
+      <div style="display:flex;justify-content:space-between;font-size:15px;color:#002451;margin-bottom:4px;"><span>Envío</span><span style="color:#0F9D58;font-weight:600;">Gratis</span></div>
+      <p style="font-size:12px;color:#43474f;text-align:right;margin-bottom:16px;">Superas los 29€ para envío gratis ✓</p>
+      <div style="border-top:1px solid #e2e2e2;padding-top:16px;margin-bottom:20px;display:flex;justify-content:space-between;align-items:center;">
+        <span style="font-size:18px;font-weight:700;color:#1a1c1c;">Total</span>
+        <span style="font-size:24px;font-weight:800;color:#002451;">59,99€</span>
+      </div>
+      <p style="font-size:12px;color:#43474f;margin-bottom:20px;">IVA incluido</p>
+      <div style="display:flex;gap:8px;margin-bottom:20px;">
+        <input type="text" placeholder="Código de descuento" style="flex:1;border:1px solid #c4c6d0;border-radius:999px;padding:10px 14px;font-size:13px;font-family:inherit;"/>
+        <button style="background:#e2e2e2;border:none;border-radius:999px;padding:10px 16px;font-size:13px;font-weight:600;cursor:pointer;">Aplicar</button>
+      </div>
+      <button onclick="alert('Redirigiendo al pago seguro...')" style="width:100%;background:#feae2c;color:#6b4500;border:none;border-radius:999px;padding:16px;font-size:15px;font-weight:700;cursor:pointer;margin-bottom:10px;display:flex;align-items:center;justify-content:center;gap:8px;">
+        Finalizar compra <span class="material-symbols-outlined" style="font-size:18px;">arrow_forward</span>
+      </button>
+      <a href="index.html" style="display:block;text-align:center;border:1px solid #c4c6d0;border-radius:999px;padding:12px;font-size:14px;font-weight:600;color:#1a1c1c;text-decoration:none;margin-bottom:20px;">Seguir comprando</a>
+      <div style="display:flex;justify-content:space-around;border-top:1px solid #e2e2e2;padding-top:16px;color:#43474f;">
+        <div style="text-align:center;">
+          <span class="material-symbols-outlined">lock</span>
+          <p style="font-size:11px;margin-top:4px;">Pago<br/>seguro</p>
+        </div>
+        <div style="text-align:center;">
+          <span class="material-symbols-outlined">local_shipping</span>
+          <p style="font-size:11px;margin-top:4px;">Envío<br/>rápido</p>
+        </div>
+        <div style="text-align:center;">
+          <span class="material-symbols-outlined">assignment_return</span>
+          <p style="font-size:11px;margin-top:4px;">Devolución<br/>fácil</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer style="background:#002451;border-radius:16px 16px 0 0;margin-top:64px;">
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:64px 40px;max-width:1280px;margin:0 auto;color:white;">
+    <div><div style="font-size:20px;font-weight:700;color:#feae2c;margin-bottom:12px;">By Seller Global</div><p style="font-size:14px;opacity:0.8;line-height:1.6;">Trusted Playfulness for every generation. Comprometidos con la seguridad y la alegría de tus hijos.</p></div>
+    <div><h4 style="font-size:14px;font-weight:700;color:#ffddb4;margin-bottom:12px;">Navegar</h4><div style="display:flex;flex-direction:column;gap:8px;"><a href="index.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:14px;">Inicio</a><a href="bebes.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:14px;">Bebés</a><a href="infantil.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:14px;">Infantil</a><a href="junior.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:14px;">Junior</a><a href="junior-plus.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:14px;">Junior Plus</a><a href="kidult.html" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:14px;">Kidult</a></div></div>
+    <div><h4 style="font-size:14px;font-weight:700;color:#ffddb4;margin-bottom:12px;">Atención al Cliente</h4><div style="display:flex;flex-direction:column;gap:8px;"><span style="color:rgba(255,255,255,0.7);font-size:14px;">Centro de Ayuda</span><span style="color:rgba(255,255,255,0.7);font-size:14px;">Seguimiento de Pedido</span><span style="color:rgba(255,255,255,0.7);font-size:14px;">Devoluciones</span></div></div>
+    <div><h4 style="font-size:14px;font-weight:700;color:#ffddb4;margin-bottom:12px;">Legal</h4><div style="display:flex;flex-direction:column;gap:8px;"><span style="color:rgba(255,255,255,0.7);font-size:14px;">Política de Privacidad</span><span style="color:rgba(255,255,255,0.7);font-size:14px;">Aviso Legal</span><span style="color:rgba(255,255,255,0.7);font-size:14px;">Política de Cookies</span></div></div>
+  </div>
+  <div style="border-top:1px solid rgba(255,255,255,0.15);padding:16px 40px;text-align:center;"><p style="color:rgba(255,255,255,0.5);font-size:13px;">© 2024 By Seller Global. Todos los derechos reservados.</p></div>
+</footer>
+
+<script>
+function changeQty(id, delta) {
+  const el = document.getElementById(id);
+  const val = Math.max(1, parseInt(el.textContent) + delta);
+  el.textContent = val;
+}
+</script>
+</body></html>

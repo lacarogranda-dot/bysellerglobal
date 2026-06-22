@@ -1,0 +1,24 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Plus Jakarta Sans', sans-serif; background: #f9f9f9; color: #1a1c1c; padding-top: 72px; }
+a { text-decoration: none; }
+a:hover { opacity: 0.85; }
+.nav-link:hover { color: #002451 !important; }
+.btn-primary { background: #feae2c; color: #6b4500; border: none; border-radius: 999px; padding: 12px 32px; font-size: 14px; font-weight: 700; cursor: pointer; transition: background 0.2s; }
+.btn-primary:hover { background: #e09820; }
+.btn-secondary { background: white; color: #002451; border: 2px solid #002451; border-radius: 999px; padding: 10px 28px; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+.btn-secondary:hover { background: #002451; color: white; }
+.product-card { background: white; border-radius: 16px; box-shadow: 0 1px 4px rgba(0,0,0,0.07); overflow: hidden; display: flex; flex-direction: column; transition: box-shadow 0.2s; }
+.product-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.12); }
+.product-card img { width: 100%; height: 200px; object-fit: contain; padding: 16px; background: #f3f3f3; transition: transform 0.3s; }
+.product-card:hover img { transform: scale(1.05); }
+.product-card .card-body { padding: 16px; flex: 1; display: flex; flex-direction: column; }
+.product-card h3 { font-size: 16px; font-weight: 600; color: #1a1c1c; margin-bottom: 8px; }
+.product-card .price { font-size: 20px; font-weight: 700; color: #002451; }
+.product-card .price-old { font-size: 14px; color: #747780; text-decoration: line-through; }
+.add-cart-btn { background: #feae2c; color: #6b4500; border: none; border-radius: 999px; padding: 8px 20px; font-size: 13px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 6px; transition: background 0.2s; }
+.add-cart-btn:hover { background: #e09820; }
+.badge { display: inline-block; border-radius: 999px; padding: 3px 10px; font-size: 11px; font-weight: 700; }
+.badge-offer { background: #feae2c; color: #6b4500; }
+.badge-new { background: #d7e2ff; color: #001b3f; }
+.badge-hot { background: #ba1a1a; color: white; }
+.stars { color: #feae2c; font-size: 16px; }
